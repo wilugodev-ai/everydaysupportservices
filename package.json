@@ -1,0 +1,19 @@
+{
+    "name":  "everydaysupportservices",
+    "version":  "0.1.0",
+    "private":  true,
+    "packageManager":  "pnpm@12.5.1",
+    "engines":  {
+                    "node":  "\u003e=24.19.0 \u003c25"
+                },
+    "scripts":  {
+                    "dev":  "pnpm -r --parallel dev",
+                    "build":  "pnpm -r build",
+                    "typecheck":  "pnpm -r typecheck",
+                    "check":  "pnpm typecheck \u0026\u0026 pnpm build",
+                    "test":  "pnpm --filter @everydaysupportservices/api build \u0026\u0026 node --test tests/*.test.mjs"
+                },
+    "devDependencies":  {
+                            "@electric-sql/pglite":  "0.3.14"
+                        }
+}
