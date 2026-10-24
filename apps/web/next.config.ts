@@ -1,9 +1,8 @@
 import type { NextConfig } from 'next';
+import path from 'node:path';
 
 const config: NextConfig = {
-  async rewrites() {
-    return [{ source: '/api/:path*', destination: 'http://127.0.0.1:4300/v1/:path*' }];
-  },
+  ...(process.env.CLOUD_RUN_BUILD === '1' ? { output: 'standalone' as const, outputFileTracingRoot: path.join(__dirname, '../..') } : {}),
 };
 
 export default config;

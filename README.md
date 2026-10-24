@@ -1,6 +1,6 @@
 # Everyday Support Services
 
-Local home-care website and care-management application in `C:\everydaysupportservices`.
+Home-care website and care-management application, developed locally in `C:\everydaysupportservices`.
 
 ## Start
 
@@ -18,6 +18,14 @@ pnpm dev
 - API health: http://127.0.0.1:4300/v1/health
 
 Both applications bind to this computer only. Ports are separate from Ablest's 3200/4200.
+
+## Browser logo
+
+The site uses a green house-and-heart browser icon, with SVG, multi-size ICO, and Apple touch icon assets in `apps/web/app`. Next.js adds the browser metadata automatically.
+
+## Appearance
+
+Use the Appearance selector in the website header, sign-in and recovery pages, client account, or admin dashboard. Light, Dark, and System match InTouch. The preference is saved in this browser under a project-specific key and synchronized across tabs. System follows operating-system changes. This setting does not change another project or browser.
 
 ## First administrator
 
@@ -66,14 +74,22 @@ pnpm test
 
 Integration tests start isolated APIs on ports 4398 and 4399 with disposable temporary SQLite databases. They verify legacy owner migration, private appointment access, registration without role escalation, user provisioning, session revocation, last-admin protection, worker listings, availability, booking conflicts, cancellations, client updates, and expired credentials. They never modify `.data`.
 
+## Google Cloud hosting
+
+Live website: https://everyday-web-njolg6chpq-uc.a.run.app
+
+Custom domain `everydaysupportservices.com` is verified with Google and awaiting [Hostinger DNS setup](docs/domain-hostinger.md) and HTTPS certificate provisioning.
+
+Production uses separate website and API services on Cloud Run with a separate PostgreSQL database in the existing Neon cluster. See [Google Cloud deployment](docs/deployment-google-cloud.md) for storage isolation, migration, secrets, scaling, and deployment steps. Local SQLite remains independent.
+
 ## Storage and stack
 
 - pnpm workspace; TypeScript 5.9.3
 - `apps/web`: Next.js 16.3.5, React 19.3.0, App Router, plain CSS, local SVG artwork
 - `apps/api`: NestJS 12.0.4, Node.js SQLite
 - `.data/content.sqlite`: private local database; ignored by Git
-- PostgreSQL/Supabase/image dependencies match Ablest; no external service is configured
+- PostgreSQL supports hosted storage; Supabase/image dependencies match the original Ablest foundation
 
 Stop the API before backing up the entire `.data` directory. Do not commit the database or setup token. `DATA_DIRECTORY` and `PORT` can isolate an API instance for testing.
 
-Git origin is `https://github.com/wilugodev-ai/everydaysupportservices.git`. Remote history has not been fetched or merged. Nothing has been pushed or deployed. Review remote history before a future first push.
+Git origin is `https://github.com/wilugodev-ai/everydaysupportservices.git`. The initial project is on GitHub. Cloud deployment uses allowlisted source uploads and excludes local data and credentials.

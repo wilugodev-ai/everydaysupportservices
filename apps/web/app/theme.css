@@ -1,0 +1,37 @@
+.theme-select{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.theme-select label{font-size:.68rem;margin:0;color:var(--muted)}
+.theme-select select{font-size:.74rem;padding:8px 23px 8px 9px;width:auto;min-width:82px;min-height:36px}
+.auth-appearance{display:flex;justify-content:flex-end;margin-bottom:25px}
+.admin-header{flex-wrap:wrap;height:auto;min-height:88px}
+.admin-header>div{flex-wrap:wrap}
+.site-header nav{flex-wrap:wrap;justify-content:flex-end}
+
+html[data-theme=dark]{color-scheme:dark;--ink:#e3ece5;--green:#a3d4b6;--muted:#adbaaf;--paper:#141c18;--sage:#25362b;--line:#3c4d40;--peach:#d5ac86;background:var(--paper)}
+html[data-theme=dark] body{background:var(--paper);color:var(--ink)}
+html[data-theme=dark] :is(.service-card,.worker-card,.booking-card,.stat-grid>div,.admin-booking,.client-list article,.user-row,.empty-state,.admin-header,.art-label){background:#1d2921;border-color:var(--line)}
+html[data-theme=dark] :is(.admin-shell,.admin-sidebar){background:#17221b;border-color:var(--line)}
+html[data-theme=dark] :is(.values-strip,.approach-section,.team-empty,.site-footer,.avatar,.round-icon,.date-tile,.service-icon){background:#26392b;color:#c0d3b7;border-color:var(--line)}
+html[data-theme=dark] :is(.hero h1,.art-label strong,.client-list h3,.admin-sidebar nav button){color:var(--ink)}
+html[data-theme=dark] .hero h1 em{color:#a4c19d}
+html[data-theme=dark] :is(.hero-footnote,.service-top,.worker-card>strong,.admin-booking small,.user-row h3 small){color:var(--muted)}
+html[data-theme=dark] :is(input,select,textarea){background:#17221c;color:var(--ink);border-color:var(--line)}
+html[data-theme=dark] :is(input,textarea)::placeholder{color:#a0aea1}
+html[data-theme=dark] input[readonly]{background:#25332a;color:#b8c9b8}
+html[data-theme=dark] .button{background:#356c50;border-color:#5a916a;color:#f3f8ef}
+html[data-theme=dark] .button:hover{background:#407d5c}
+html[data-theme=dark] .button.secondary{background:transparent;color:var(--green);border-color:#718b73}
+html[data-theme=dark] :is(.button.secondary:hover,.password-toggle:hover){background:#2d4132}
+html[data-theme=dark] .topbar{background:#294a36;color:#e4eddc}
+html[data-theme=dark] .care-quote{background:#294a36;color:#f1f5e9}
+html[data-theme=dark] .admin-sidebar nav button.selected{background:#304a35;color:#d5e9cc}
+html[data-theme=dark] :is(.status,.credential-pending){background:#483e25;color:#f1d89a}
+html[data-theme=dark] :is(.status.confirmed,.verified,.notice){background:#2a422d;color:#c1e0b1;border-color:#65805a}
+html[data-theme=dark] .status.completed{background:#293f48;color:#b8dce9}
+html[data-theme=dark] .status.cancelled{background:#433b36;color:#d6c5b6}
+html[data-theme=dark] .error{background:#462b25;color:#f2b8a8;border-color:#986052}
+html[data-theme=dark] :is(.step,.sidebar-note,.footer-bottom,.values-strip span){border-color:var(--line)}
+html[data-theme=dark] :is(.step>span,.sidebar-note){color:#b2c0a7}
+html[data-theme=dark] .modal-backdrop{background:#0009}
+html[data-theme=dark] .hero-art svg{filter:brightness(.87)}
+@media(max-width:1000px){.site-header{gap:20px}.site-header nav{gap:10px 15px}.theme-select label{font-size:.64rem}}
+@media(max-width:760px){:root{scroll-padding-top:220px}.site-header nav{justify-content:flex-start}.theme-select{gap:6px}.site-header .theme-select{order:2}.admin-header{gap:16px;padding:16px 20px}.admin-header>div{gap:12px}.admin-header .theme-select{gap:5px}}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Everyday Support Services</title>
+  <rect width="64" height="64" rx="16" fill="#305c4e"/>
+  <path d="M12 29 32 12 52 29M19 31v18a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V31" fill="none" stroke="#fbfaf6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m32 45-8.5-8.1a5.9 5.9 0 0 1 8.5-8.2 5.9 5.9 0 0 1 8.5 8.2Z" fill="#e6ba92"/>
+</svg>
