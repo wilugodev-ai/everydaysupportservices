@@ -25,7 +25,7 @@ The site uses a green house-and-heart browser icon, with SVG, multi-size ICO, an
 
 ## Appearance
 
-Use the Appearance selector in the website header, sign-in and recovery pages, client account, or admin dashboard. Light, Dark, and System match InTouch. The preference is saved in this browser under a project-specific key and synchronized across tabs. System follows operating-system changes. This setting does not change another project or browser.
+Open the user-icon menu in any website or account header to reach My profile, My appointments, Appearance, and Sign out. Administrators also see Admin dashboard; visitors see Sign in and Create an account. The dropdown closes on Escape, outside clicks, or when keyboard focus leaves it. Use Appearance inside this menu on the website, sign-in and recovery pages, client account, or admin dashboard. Light, Dark, and System match InTouch. The preference is saved in this browser under a project-specific key and synchronized across tabs. System follows operating-system changes. This setting does not change another project or browser.
 
 ## First administrator
 
