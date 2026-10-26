@@ -5,7 +5,7 @@ import { ThemeController } from './theme';
 
 export const metadata: Metadata = {
   title: 'Everyday Support Services',
-  description: 'Professional care in the comfort of your home. Explore personal care, companionship, respite care, and everyday home support. Request a care visit.',
+  description: 'Compassionate home care: companionship, personal care, meal preparation, mobility assistance, transportation, light housekeeping, and Alzheimer’s and dementia support.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

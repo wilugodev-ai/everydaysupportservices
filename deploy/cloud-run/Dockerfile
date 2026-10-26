@@ -32,6 +32,7 @@ FROM workspace AS web-build
 RUN pnpm install --frozen-lockfile --prod=false --filter @everydaysupportservices/web...
 COPY apps/web/tsconfig.json apps/web/next-env.d.ts apps/web/next.config.ts ./apps/web/
 COPY apps/web/app ./apps/web/app
+COPY apps/web/public ./apps/web/public
 RUN CLOUD_RUN_BUILD=1 pnpm --filter @everydaysupportservices/web build
 
 FROM node:24.19.0-bookworm-slim AS web
@@ -39,6 +40,7 @@ ENV NODE_ENV=production HOSTNAME=0.0.0.0 PORT=8080 NEXT_TELEMETRY_DISABLED=1
 WORKDIR /app
 COPY --from=web-build --chown=node:node /app/apps/web/.next/standalone ./
 COPY --from=web-build --chown=node:node /app/apps/web/.next/static ./apps/web/.next/static
+COPY --from=web-build --chown=node:node /app/apps/web/public ./apps/web/public
 USER node
 EXPOSE 8080
 CMD ["node", "apps/web/server.js"]

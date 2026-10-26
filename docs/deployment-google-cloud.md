@@ -6,6 +6,8 @@ Live Google website: https://everyday-web-njolg6chpq-uc.a.run.app
 
 API: https://everyday-api-njolg6chpq-uc.a.run.app
 
+October 26, 2026 update: deployed release `20261026-161741` with the social-post brand mark, navy/sky/gold palette, and eight advertised services in the website and booking API. API revision `everyday-api-00005-mqw` and website revision `everyday-web-00005-mj5` serve all traffic. Existing domain origins and secret references were preserved. Trusted HTTPS returned HTTP 200 for root, www, and the Google website URL; each homepage contains the new logo and eight service cards. Logo/favicon assets, sign-in, password recovery, public auth state, and PostgreSQL health also passed HTTP checks on www. No production bookings or account changes were made for verification. Local type checks, production builds, and four Node integration suites passed; the optional PostgreSQL integration suite was skipped.
+
 Both services deployed on October 23, 2026. HTTPS checks passed for the homepage, sign-in, account, admin, and recovery pages. API health reports PostgreSQL. Temporary test sessions verified client account isolation, client rejection from admin endpoints, and foreign-origin write rejection; those sessions were removed. Imported password salts/hashes match local records. No real recovery email was sent during deployment checks.
 
 Custom domain: `everydaysupportservices.com` at Hostinger. Google ownership is verified and root/www domain mappings are created. Hostinger DNS is updated and verified through authoritative/Cloudflare/Google lookups. Google HTTPS certificates are still pending. See [exact Hostinger records](domain-hostinger.md). No DNS changes have been made by the deployment tools.

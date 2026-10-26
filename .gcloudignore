@@ -17,6 +17,8 @@
 !apps/web/next.config.ts
 !apps/web/app/
 !apps/web/app/**
+!apps/web/public/
+!apps/web/public/**
 !deploy/
 !deploy/cloud-run/
 !deploy/cloud-run/Dockerfile

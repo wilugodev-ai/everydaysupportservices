@@ -17,7 +17,8 @@ function issueRecovery(id: string) {
     writeFileSync(recoveryFileFor(id), token, { mode: 0o600 });
     return token;
 }
-const services = ['Personal care', 'Companionship', 'Respite care', 'Everyday home support'];
+// Retain legacy categories so existing bookings remain compatible.
+const services = ["Companionship","Personal care","Meal preparation","Mobility assistance","Transportation to appointments","Light housekeeping","Transportation","Alzheimer’s & dementia care","Respite care","Everyday home support"];
 type Input = Record<string, any>;
 type Request = {
     headers: Record<string, string | undefined>;
